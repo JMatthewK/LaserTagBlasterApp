@@ -41,3 +41,35 @@ endpoints # Folder with all endpoints
 - match.py #match endpoints
 - hit.py # hit endpoints
 - register.py # registration endpoints etc
+
+5. I worked on adding registration, so adding and removing players. I think the next step is to setup a game, and then have a UI I can read in the terminal
+I'll work on starting the match and being able to register hits from one player to another. Once that is set, I can start working on the code from the ESP32.
+
+6. Getting ready for the flow of the game
+
+Essentially there are 3 stages
+
+    1. Game setup
+        - Adding and removing players
+        - Assigning teams
+        - Preparing game state
+        - Then using /match/start
+    2. Game in progress
+        - Players shoot and get hit
+        - Update the health and lives per hit
+        - Track who is hitting who and record stats
+        - /hit endpoint will be used here
+            - I assume the logic to determine when to call the hit endpoint will be determined when I make the logic for the ESP32
+    3. Post-match
+        - Determine who won, and determine the stats
+        - Stop all hits from being registered
+        - GIVE THE OPTION TO EITHER
+            - Reset the state of the match
+            - Replay with same players
+                - Change teams
+                - Same teams
+
+
+**Half way through doing all of this I decided it might be a good idea to instead use cameras and openCV to detect instead of IR, I think this could be a cool breakthrough for home lasertag systems**
+
+I also think a good idea is to have a OLED screen on each blaster to see your health and lives and update where you got hit etc etc
