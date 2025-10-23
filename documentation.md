@@ -73,3 +73,5 @@ Essentially there are 3 stages
 **Half way through doing all of this I decided it might be a good idea to instead use cameras and openCV to detect instead of IR, I think this could be a cool breakthrough for home lasertag systems**
 
 I also think a good idea is to have a OLED screen on each blaster to see your health and lives and update where you got hit etc etc
+
+**I realized that doing everything with a camera would create the problem of not knowing who got hit because it may mistake players. SO a combo of IR and CV could be baller**

@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from endpoints import registration, match
+from endpoints import registration, match, hit
 
 app = FastAPI()
 # 127.0.0.1:8000
@@ -11,4 +11,5 @@ def home():
 
 app.include_router(match.router)
 app.include_router(registration.router)
+app.include_router(hit.router)
         

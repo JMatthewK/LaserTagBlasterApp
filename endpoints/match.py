@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from game_state import game_state, reset_game, INITIAL_HEALTH, STANDARD_LIVES, STANDARD_BLASTER
+from datetime import datetime
 
 # Setup APIRouter to main
 router = APIRouter()
@@ -34,6 +35,9 @@ def start_match():
         player["blaster_type"] = STANDARD_BLASTER
     
     game_state["started"] = True
+    # Timer system for later
+    game_state["start_time"] = datetime.utcnow()
+    game_state["end_time"] = None
     
     # Log team sizes
     team_sizes = {team: len(players) for team, players in game_state["teams"].items()}

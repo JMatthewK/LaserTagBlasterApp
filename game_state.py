@@ -8,6 +8,8 @@ STANDARD_BLASTER = "pistol"
 
 game_state = {
     "started": False,
+    "start_time": None,
+    "end_time": None,
     # A and B are the primary teams with all other teams being there for custome gamemodes
     "teams": {
         "A": [],
