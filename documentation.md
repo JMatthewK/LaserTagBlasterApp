@@ -77,3 +77,4 @@ I also think a good idea is to have a OLED screen on each blaster to see your he
 **I realized that doing everything with a camera would create the problem of not knowing who got hit because it may mistake players. SO a combo of IR and CV could be baller**
 
 
+7. I am finally at the point of the API where I can register/remove players start a game, register hits and then end a game where it will reset.
