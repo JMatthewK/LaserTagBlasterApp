@@ -75,5 +75,13 @@ def end_match():
     if game_state["started"] == False:
         return {"error": "Match not started.",
                 "Match started: ": game_state["started"],}
+        
+    # Set the game_state to not started
     
+    game_state["started"] == False
     
+    # Return the team sizes and list of players
+    return {
+        "message": "Match ended successfully.",
+        "Match started: ": game_state["started"],
+    }

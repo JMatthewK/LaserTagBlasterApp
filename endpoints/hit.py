@@ -46,22 +46,25 @@ def hit_player(
     if target["health"] <= 0:
         if target["lives"] is not None:
             target["lives"] -= 1
+            
+            # Only used when game includes lives, default is a infinite point based game
+            if target["lives"] > 0:
+                target["health"] = INITIAL_HEALTH
+                target["blaster_type"] = STANDARD_BLASTER
+            else:
+                target["is_alive"] = False
         else:
             shooter["points"] += 1
-        
-        # Only used when game includes lives, default is a infinite point based game
-        if target["lives"] > 0:
             target["health"] = INITIAL_HEALTH
             target["blaster_type"] = STANDARD_BLASTER
-        else:
-            target["is_alive"] = False
     
     return {
         "message": f"Shooter {shooter_id} hit Target {target_id} in zone {hit_zone} for {damage} damage",
         "target status:": {
             "health": target["health"],
             "lives": target["lives"],
-            "is_alive": target["is_alive"]
+            "is_alive": target["is_alive"],
+            "points": target["points"]
         }
     }
         
