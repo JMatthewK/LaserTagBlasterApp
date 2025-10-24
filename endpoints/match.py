@@ -78,7 +78,7 @@ def end_match():
         
     # Set the game_state to not started
     
-    game_state["started"] == False
+    game_state["started"] = False
     
     # Return the team sizes and list of players
     return {

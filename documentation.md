@@ -75,3 +75,5 @@ Essentially there are 3 stages
 I also think a good idea is to have a OLED screen on each blaster to see your health and lives and update where you got hit etc etc
 
 **I realized that doing everything with a camera would create the problem of not knowing who got hit because it may mistake players. SO a combo of IR and CV could be baller**
+
+

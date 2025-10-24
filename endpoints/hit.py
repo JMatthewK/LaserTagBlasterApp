@@ -63,8 +63,10 @@ def hit_player(
         "target status:": {
             "health": target["health"],
             "lives": target["lives"],
-            "is_alive": target["is_alive"],
-            "points": target["points"]
-        }
+            "is_alive": target["is_alive"]
+        },
+        "shooter status:": {
+            "shooter points": shooter["points"]
+            }
     }
         
