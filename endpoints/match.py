@@ -31,6 +31,7 @@ def start_match():
     for player_id, player in game_state["players"].items():
         player["health"] = INITIAL_HEALTH
         player["lives"] = STANDARD_LIVES
+        player["points"] = 0
         player["is_alive"] = True
         player["blaster_type"] = STANDARD_BLASTER
     
@@ -51,7 +52,7 @@ def start_match():
 
     }
 
-# Funciton to reset the match (remove players and reset everything)
+# Function to reset the match (remove players and reset everything)
 @router.post("/match/reset")
 def reset_match():
     """
@@ -62,3 +63,17 @@ def reset_match():
     return{"message": f"Match reset.",
            "team_sizes": {team: len(players) for team, players in game_state["teams"].items()}
     }
+    
+# Function to end the match
+@router.post("/match/end")
+def end_match():
+    """
+    Ends the match but doesn't reset the match
+    """
+    
+    # Check if match is in progress
+    if game_state["started"] == False:
+        return {"error": "Match not started.",
+                "Match started: ": game_state["started"],}
+    
+    

@@ -3,7 +3,7 @@
 # -----------------------
 MAX_PLAYERS = 8
 INITIAL_HEALTH = 100
-STANDARD_LIVES = 3
+STANDARD_LIVES = None
 STANDARD_BLASTER = "pistol"
 
 game_state = {
@@ -22,7 +22,7 @@ game_state = {
         "H": []
     },
     # Players should be in the format
-    # player_id: {"name" "team", "health", "lives", "blaster_type", "is_alive"}
+    # player_id: {"name" "team", "points", "health", "lives", "blaster_type", "is_alive"}
     "players": {
         
     }

@@ -28,6 +28,7 @@ def register_player(reg: PlayerRegistration):
         "team": reg.team,
         "health": INITIAL_HEALTH,
         "lives": STANDARD_LIVES,
+        "points": 0,
         "blaster_type": STANDARD_BLASTER,
         "is_alive": True
     }
