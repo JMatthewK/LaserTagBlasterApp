@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from endpoints import registration, match, hit
+from ..endpoints import registration, match, hit
 
 app = FastAPI()
 # 127.0.0.1:8000

@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from game_state import game_state, reset_game, INITIAL_HEALTH, STANDARD_LIVES, STANDARD_BLASTER
+from backend.app.game_state import game_state, reset_game, INITIAL_HEALTH, STANDARD_LIVES, STANDARD_BLASTER
 from datetime import datetime
 
 # Setup APIRouter to main

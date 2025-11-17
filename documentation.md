@@ -78,3 +78,7 @@ I also think a good idea is to have a OLED screen on each blaster to see your he
 
 
 7. I am finally at the point of the API where I can register/remove players start a game, register hits and then end a game where it will reset.
+
+8. Started setting up the ESP32
+- I had to download the CP210x driver
+- Downloaded platform IO and the C/C++ extension for vscode

@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from fastapi import Body
-from game_state import game_state, INITIAL_HEALTH, STANDARD_BLASTER
+from backend.app.game_state import game_state, INITIAL_HEALTH, STANDARD_BLASTER
 
 # Setup APIRouter to main
 router = APIRouter()

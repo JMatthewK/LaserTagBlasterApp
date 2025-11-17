@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from models import PlayerRegistration
-from game_state import game_state, INITIAL_HEALTH, MAX_PLAYERS, STANDARD_LIVES, STANDARD_BLASTER
+from backend.app.models import PlayerRegistration
+from backend.app.game_state import game_state, INITIAL_HEALTH, MAX_PLAYERS, STANDARD_LIVES, STANDARD_BLASTER
 
 # Setup APIRouter to main
 router = APIRouter()
@@ -51,6 +51,10 @@ def remove_player(pid: int):
     Args:
         pid (int): The ID of the player to be removed
     """
+    # Check if the match has started
+    if game_state["started"]:
+        return {"error": "Cannot register during ongoing match"}
+    
     # Make sure player id exists in the list of players
     if pid not in game_state["players"]:
         return {"error": f"Player with ID {pid} not found."}
